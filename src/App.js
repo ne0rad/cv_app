@@ -1,14 +1,14 @@
-import Education from './components/Education';
-import Experience from './components/Experience';
-import General from './components/General';
+import Page from './components/Page';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './styles/App.css';
 
 function App() {
   return (
     <div id="content">
-      <General />
-      <Education />
-      <Experience />
+      <Header />
+      <Page />
+      <Footer />
     </div>
   );
 }

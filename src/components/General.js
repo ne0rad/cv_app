@@ -6,17 +6,17 @@ function General() {
     const [age, setAge] = useState(0);
 
     function setInit() {
-        setName('Radminas');
-        setSurname('Usackas');
-        setAge(31);
+        setName('Mister');
+        setSurname('Bean');
+        setAge(65);
     }
 
     return (
         <div>
-            <h1>Name: {name}</h1>
-            <h1>Surname: {surname}</h1>
-            <h1>Age: {age}</h1>
-            <button onClick={() => setInit()}>Set Initial</button>
+            <div className="text">Name: {name}</div>
+            <div className="text">Surname: {surname}</div>
+            <div className="text">Age: {age}</div>
+            <button onClick={() => setInit()} disabled={age > 0 ? true : false}>Set Initial</button>
         </div>
     )
 }

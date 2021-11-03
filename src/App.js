@@ -1,9 +1,14 @@
+import Education from './components/Education';
+import Experience from './components/Experience';
+import General from './components/General';
 import './styles/App.css';
 
 function App() {
   return (
     <div id="content">
-      <h1>Hello React!</h1>
+      <General />
+      <Education />
+      <Experience />
     </div>
   );
 }

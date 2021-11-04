@@ -11,7 +11,7 @@ function Menu({ editMode, setEditMode, savePDF }) {
                 </label>
             </div>
             <div className="menu-item">
-                <button className="print-btn" disabled={editMode} onClick={savePDF}>Download as PDF</button>
+                <button className="print-btn" disabled={editMode} onClick={savePDF}>Save as PDF</button>
             </div>
         </div>
     )

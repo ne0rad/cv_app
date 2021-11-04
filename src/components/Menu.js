@@ -1,6 +1,6 @@
 import '../styles/switch.css';
 
-function Menu({ editMode, setEditMode }) {
+function Menu({ editMode, setEditMode, savePDF }) {
     return (
         <div className="menu">
             <div className="menu-item">
@@ -11,7 +11,7 @@ function Menu({ editMode, setEditMode }) {
                 </label>
             </div>
             <div className="menu-item">
-                <button className="print-btn" disabled={editMode}>Download as PDF</button>
+                <button className="print-btn" disabled={editMode} onClick={savePDF}>Download as PDF</button>
             </div>
         </div>
     )

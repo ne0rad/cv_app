@@ -2,13 +2,13 @@ import Education from "./Education";
 import Experience from "./Experience";
 import General from "./General";
 
-function Page({editMode}) {
+function Page({ editMode }) {
 
     return (
         <div id="page">
             <General editMode={editMode} />
-            <Education />
-            <Experience />
+            <Education editMode={editMode} />
+            <Experience editMode={editMode} />
         </div>
     );
 }

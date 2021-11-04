@@ -4,12 +4,13 @@ import EmailImg from '../images/email.svg';
 import GitHubImg from '../images/github.png';
 
 function General({ editMode }) {
-    const [name, setName] = useState('Michael');
-    const [surname, setSurname] = useState('Jackson');
-    const [phoneNumber, setPhoneNumber] = useState('+44 757 1234 123');
-    const [email, setEmail] = useState('michael@jackson.com');
-    const [github, setGithub] = useState('mich4el');
+    const [name, setName] = useState('');
+    const [surname, setSurname] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [email, setEmail] = useState('');
+    const [github, setGithub] = useState('');
 
+    // Preview Mode JSX
     const preview = (
         <div id="general">
             <div className="container">
@@ -19,30 +20,27 @@ function General({ editMode }) {
 
             <div className="container">
                 <div className="text-small text-with-icon">
-                    <img className="icon" src={PhoneImg} alt="" />
+                    <img hidden={phoneNumber.length < 1} className="icon" src={PhoneImg} alt="" />
                     {phoneNumber}
                 </div>
                 <div className="text-small text-with-icon">
-                    <img className="icon" src={EmailImg} alt="" />
+                    <img hidden={email.length < 1} className="icon" src={EmailImg} alt="" />
                     {email}
                 </div>
                 <div className="text-small text-with-icon">
-                    <img className="icon" src={GitHubImg} alt="" />
+                    <img hidden={github.length < 1} className="icon" src={GitHubImg} alt="" />
                     {github}
                 </div>
-            </div>
-
-            <div className="container">
-                <img className="profile-photo" src="https://placeholder.pics/svg/140x140/DEDEDE/555555/" alt="" />
             </div>
         </div>
     );
 
+    // Edit Mode JSX
     const edit = (
         <div id="general">
             <div className="container">
                 <div className="input-wrap">
-                    <label for="name" className="label">Name:</label>
+                    <label className="label">Name:</label>
                     <input
                         name="name"
                         value={name}
@@ -51,7 +49,7 @@ function General({ editMode }) {
                     />
                 </div>
                 <div className="input-wrap">
-                    <label for="surname" className="label">Surname:</label>
+                    <label className="label">Surname:</label>
 
                     <input
                         name="surname"
@@ -64,7 +62,7 @@ function General({ editMode }) {
 
             <div className="container">
                 <div className="input-wrap">
-                    <label for="phone" className="label">Phone:</label>
+                    <label className="label">Phone:</label>
                     <input
                         name="phone"
                         value={phoneNumber}
@@ -73,7 +71,7 @@ function General({ editMode }) {
                     />
                 </div>
                 <div className="input-wrap">
-                    <label for="email" className="label">Email:</label>
+                    <label className="label">Email:</label>
                     <input
                         name="email"
                         type="email"
@@ -83,19 +81,14 @@ function General({ editMode }) {
                     />
                 </div>
                 <div className="input-wrap">
-                    <label for="github" className="label">GitHub:</label>
+                    <label className="label">GitHub:</label>
                     <input
                         name="github"
-                        type="text"
                         value={github}
                         placeholder="Your GitHub username"
                         onChange={(e) => setGithub(e.target.value)}
                     />
                 </div>
-            </div>
-
-            <div className="container">
-                <img className="profile-photo" src="https://placeholder.pics/svg/140x140/DEDEDE/555555/" alt="" />
             </div>
         </div>
     );

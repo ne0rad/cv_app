@@ -35,7 +35,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 10px;
 }
 
 #page {
@@ -46,26 +46,26 @@ body {
   background-color: #fdfdfd;
   text-align: left;
   width: 700px;
-  min-height: 900px;
   margin: 20px;
   border-radius: 5px;
   box-shadow: 2px 2px 4px 0 black;
-  user-select: none;
 }
 
 #page input {
   font-family: "Ubuntu", sans-serif;
+  background-color: #d7edff;
   font-size: 16px;
   padding: 3px;
   width: 180px;
   border: none;
   margin: 5px;
   border-radius: 3px;
+  box-shadow: 0 0 0 1px #757575;
 }
 
 #page input:focus {
   outline: none;
-  box-shadow: 0 0 0 1px black;
+  box-shadow: 0 0 2px 1px black;
 }
 
 .input-wrap {
@@ -82,10 +82,10 @@ body {
 #general {
   background-color: #b0d9ff;
   width: 100%;
-  height: 160px;
+  height: 120px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 20px 0 10px 0;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -96,13 +96,31 @@ body {
   height: 140px;
 }
 
+#education {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 10px 0 10px 0;
+}
+
+#experience {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 10px 0 10px 0;
+}
+
 .print-btn {
   font-family: "Ubuntu", sans-serif;
   font-size: 18px;
   background-color: #b0d9ff;
   border: none;
   width: 180px;
-  height: 30px;
+  height: 40px;
   padding: 5px;
   margin: 5px;
   border-radius: 3px;
@@ -127,9 +145,65 @@ body {
   box-shadow: 1px 1px 2px 0 black;
 }
 
+.delete-btn {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  background-color: #fc9999;
+  border: none;
+  width: 80px;
+  height: 25px;
+  padding: 2px;
+  margin: 5px;
+  border-radius: 3px;
+  align-self: center;
+  justify-self: center;
+  box-shadow: 1px 1px 2px 0 black;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background-color: #f16464;
+  color: white;
+}
+
+.delete-btn:active {
+  box-shadow: 1px 1px 1px 0 black;
+}
+
+.add-btn {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  background-color: #b0d9ff;
+  border: none;
+  width: 80px;
+  height: 25px;
+  padding: 2px;
+  margin: 5px;
+  border-radius: 3px;
+  align-self: center;
+  justify-self: center;
+  box-shadow: 1px 1px 2px 0 black;
+  transition: all 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #2586e0;
+  color: white;
+}
+
+.add-btn:active {
+  box-shadow: 1px 1px 1px 0 black;
+}
+
 .container {
   padding: 5px;
   text-align: center;
+}
+
+.left {
+  justify-self: flex-start;
+  align-self: flex-start;
+  text-align: left;
 }
 
 .icon {
@@ -160,6 +234,21 @@ body {
   margin: 3px;
 }
 
-.inline {
-  display: inline;
+.text-title {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.text-bold {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.title {
+  width: 100%;
+  padding: 5px 0 5px 0;
+  margin: 5px 0 10px 0;
+  background-color: #b0d9ff;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }

@@ -4,7 +4,7 @@ import './styles/App.css';
 import { useState } from 'react';
 
 function App() {
-  const [editMode, setEditMode] = useState(false);
+  const [editMode, setEditMode] = useState(true);
   return (
     <div id="content">
       <Menu

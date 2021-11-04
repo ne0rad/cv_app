@@ -2,6 +2,8 @@
 
 CV making app for The Odin Project
 
+Live Preview: https://ne0rad.github.io/cv_app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

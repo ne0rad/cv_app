@@ -6,7 +6,6 @@ import GitHubImg from '../images/github.png';
 function General({ editMode }) {
     const [name, setName] = useState('Michael');
     const [surname, setSurname] = useState('Jackson');
-    const [age, setAge] = useState(63);
     const [phoneNumber, setPhoneNumber] = useState('+44 757 1234 123');
     const [email, setEmail] = useState('michael@jackson.com');
     const [github, setGithub] = useState('mich4el');
@@ -15,7 +14,7 @@ function General({ editMode }) {
         <div id="general">
             <div className="container">
                 <div className="text-big">{name}</div>
-                <div className="text">{surname} {age > 0 && `(${age})`}</div>
+                <div className="text">{surname}</div>
             </div>
 
             <div className="container">
@@ -59,16 +58,6 @@ function General({ editMode }) {
                         value={surname}
                         placeholder="Your surname"
                         onChange={(e) => setSurname(e.target.value)}
-                    />
-                </div>
-                <div className="input-wrap">
-                    <label for="age" className="label">Age:</label>
-                    <input
-                        name="age"
-                        type="number"
-                        value={age}
-                        placeholder="Your age"
-                        onChange={(e) => setAge(e.target.value)}
                     />
                 </div>
             </div>

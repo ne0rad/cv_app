@@ -1,7 +1,6 @@
 import Page from './components/Page';
 import Menu from './components/Menu';
 import './styles/App.css';
-import './styles/switch.css';
 import { useState } from 'react';
 
 function App() {

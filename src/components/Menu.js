@@ -1,3 +1,5 @@
+import '../styles/switch.css';
+
 function Menu({ editMode, setEditMode }) {
     return (
         <div className="menu">
